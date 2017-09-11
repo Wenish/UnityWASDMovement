@@ -181,23 +181,23 @@ public class RPGCharacterController : MonoBehaviour{
 	void Update(){
 		//input abstraction for easier asset updates using outside control schemes
 		bool inputJump = Input.GetButtonDown("Jump");
-		bool inputLightHit = Input.GetButtonDown("LightHit");
-		bool inputDeath = Input.GetButtonDown("Death");
-		bool inputUnarmed = Input.GetButtonDown("Unarmed");
-		bool inputShield = Input.GetButtonDown("Shield");
-		bool inputAttackL = Input.GetButtonDown("AttackL");
-		bool inputAttackR = Input.GetButtonDown("AttackR");
-		bool inputCastL = Input.GetButtonDown("CastL");
-		bool inputCastR = Input.GetButtonDown("CastR");
-		float inputSwitchUpDown = Input.GetAxisRaw("SwitchUpDown");
-		float inputSwitchLeftRight = Input.GetAxisRaw("SwitchLeftRight");
+		bool inputLightHit = false;
+		bool inputDeath = false;
+		bool inputUnarmed = false;
+		bool inputShield = false;
+		bool inputAttackL = false;
+		bool inputAttackR = false;
+		bool inputCastL = false;
+		bool inputCastR = false;
+		float inputSwitchUpDown = 0;
+		float inputSwitchLeftRight = 0;
 		bool inputStrafe = Input.GetKey(KeyCode.LeftShift);
-		float inputTargetBlock = Input.GetAxisRaw("TargetBlock");
-		float inputDashVertical = Input.GetAxisRaw("DashVertical");
-		float inputDashHorizontal = Input.GetAxisRaw("DashHorizontal");
+		float inputTargetBlock = 0;
+		float inputDashVertical = 0;
+		float inputDashHorizontal = 0;
 		float inputHorizontal = Input.GetAxisRaw("Horizontal");
 		float inputVertical = Input.GetAxisRaw("Vertical");
-		bool inputAiming = Input.GetButtonDown("Aiming");
+		bool inputAiming = false;
 		//Camera relative movement
 		Transform cameraTransform = sceneCamera.transform;
 		//Forward vector relative to the camera along the x-z plane   
